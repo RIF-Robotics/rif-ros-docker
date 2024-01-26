@@ -19,6 +19,7 @@ services:
       - XAUTHORITY=/tmp/.docker.xauth
       - USER_ID=${USER_ID}
       - GROUP_ID=${GROUP_ID}
+      - TERM=xterm-256color            # Enable terminal colors
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw # Connect X11
       - .docker.xauth:/tmp/.docker.xauth # Provide the generated xauth file
@@ -44,6 +45,7 @@ services:
       - NVIDIA_DRIVER_CAPABILITIES=all
       - USER_ID=${USER_ID}
       - GROUP_ID=${GROUP_ID}
+      - TERM=xterm-256color            # Enable terminal colors
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw # Connect X11
       - .docker.xauth:/tmp/.docker.xauth # Provide the generated xauth file
